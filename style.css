@@ -1,0 +1,40 @@
+html {
+  overflow-y: unset;
+}
+
+body {
+  padding: 0 2rem;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+::placeholder {
+  color: #888 !important;
+}
+
+.initials {
+  text-transform: uppercase;
+}
+
+.output {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.output:hover {
+  background: rgb(190, 233, 247);
+}
+
+@media screen and (max-width: 500px) {
+  .output {
+    font-size: 1em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  body {
+    padding: 0 1rem;
+  }
+}

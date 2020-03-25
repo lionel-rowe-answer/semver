@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SemVer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container mt">
+      <h1 class="title">SemVer</h1>
+      <form id="form">
+        <div class="field">
+          <div class="control">
+            <label class="label"
+              >Previous version
+              <input
+                class="input"
+                id="prev"
+                name="prev"
+                type="text"
+                placeholder="0.0.0"
+              />
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label"
+              >Bump
+              <div class="select is-fullwidth">
+                <select id="bump" name="bump">
+                  <option value="3" selected>None</option>
+                  <option value="0">Major</option>
+                  <option value="1">Minor</option>
+                  <option value="2">Patch</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label"
+              >Relase type
+              <div class="select is-fullwidth">
+                <select id="type" name="type">
+                  <option value="-draft" selected>Draft</option>
+                  <option value="-alpha">Alpha</option>
+                  <option value="-beta">Beta</option>
+                  <option value="">Full</option>
+                </select>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label"
+              >Your initials
+              <input
+                class="input initials"
+                id="initials"
+                name="initials"
+                type="text"
+                placeholder="ABC"
+              />
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <div class="mt">
+        <strong>Next version</strong>
+      </div>
+      <pre class="output" id="output">-</pre>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
